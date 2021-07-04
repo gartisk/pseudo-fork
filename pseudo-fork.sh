@@ -20,6 +20,12 @@
 
 export PATH=/bin:/usr/bin:/usr/local/bin
 
+# trap ctrl-c and call ctrl_c()
+trap ctrl_c INT
+ctrl_c() {
+    exit 0
+}
+
 original_repo=$1
 forked_repo=$2
 
